@@ -1,11 +1,8 @@
 import Foundation
 public class CrackStation:Decrypter {
-    //    private var lookuptable: [String:String]
-    //var lookuptable: [String:String]
+   
     public required init(){}
-        //        var lookuptable: [String:String]
-        
-        // lookuptable = try loadDictionaryFromDisk()
+      
         
     
     
