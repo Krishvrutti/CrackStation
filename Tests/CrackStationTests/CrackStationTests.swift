@@ -38,5 +38,15 @@ final class CrackStationTests: XCTestCase {
         XCTAssertEqual(result, nil)
 
     }
+    func testThreeLetterPassword() throws {
+        let crackStation = CrackStation()
+        let result = crackStation.decrypt(shaHash: "85ceab36fa6b16b699d89b663d8538909737b0c5ccadcace9eb89858044f6c26")
+        let expectedResult = "Ab?"
+        
+        
+        
+        XCTAssertEqual(result, expectedResult)
+
+    }
 }
 
