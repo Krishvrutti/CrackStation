@@ -22,7 +22,7 @@ public class CrackStation:Decrypter {
     
     
     public func decrypt(shaHash: String) -> String? {
-        var lookuptable = try? CrackStation.loadDictionaryFromDisk()
+        let lookuptable = try? CrackStation.loadDictionaryFromDisk()
         return lookuptable?[shaHash]
         
         
