@@ -13,7 +13,7 @@ public class CrackStation:Decrypter {
         
         
         
-     static func loadDictionaryFromDisk() throws -> [String : String] {
+     static private func loadDictionaryFromDisk() throws -> [String : String] {
             
             guard let path = Bundle.module.url(forResource: "data", withExtension: "json") else { return [:] }
             
