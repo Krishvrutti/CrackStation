@@ -1,0 +1,39 @@
+---
+openapi: 3.0.1
+info:
+  title: Crack Station
+  description: This open API decrypts a given unsalted password which matches the regex [A-Za-z0-9?!]{1,3}$ and is encrypted using SHA1 or SHA256.
+  version: 1.0.0
+servers:
+- url: https://fftr53q9il.execute-api.us-east-1.amazonaws.com/prod
+tags:
+- name: password
+  description: Password to be cracked
+paths:
+  /password/{shaHash}:
+    get:
+      tags:
+      - password
+      description: Returns the cracked password
+      parameters:
+      - name: shaHash
+        in: path
+        description: password to crack
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                "0":
+                  value: '{"df211ccdd94a63e0bcb9e6ae427a249484a49d60": "as"}'
+    servers:
+    - url: https://fftr53q9il.execute-api.us-east-1.amazonaws.com/prod
+components: {}
